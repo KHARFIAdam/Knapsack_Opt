@@ -1,58 +1,59 @@
-# Knapsack Problem Solver 🚀
+# Solveur du Problème du Sac à Dos 🚀
 
-This repository contains a solution to the classic **Knapsack Problem** using various optimization techniques, including **Genetic Algorithm (GA)**, **Tabu Search**, and **Linear Programming** with a solver. The goal of this project is to efficiently solve the **0/1 Knapsack Problem** with different approaches to compare their performance and accuracy.
+Ce dépôt contient une solution au classique **Problème du Sac à Dos** en utilisant diverses techniques d'optimisation, notamment l'**Algorithme Génétique (GA)**, la **Recherche Tabou**, et la **Programmation Linéaire** avec un solveur. L'objectif de ce projet est de résoudre efficacement le **problème du sac à dos 0/1** avec différentes approches et de comparer leurs performances et leur précision.
 
-## Problem Overview 🎒
+## Présentation du Problème 🎒
 
-The **Knapsack Problem** involves selecting a subset of items with given weights and values to maximize the total value without exceeding a weight limit. This is a common problem in combinatorial optimization and has applications in areas like resource allocation, logistics, and more.
+Le **Problème du Sac à Dos** consiste à sélectionner un sous-ensemble d'objets ayant des poids et des valeurs donnés afin de maximiser la valeur totale sans dépasser une limite de poids. Ce problème d'optimisation combinatoire est couramment utilisé dans des domaines tels que l’allocation des ressources, la logistique, et bien plus encore.
 
-### Problem Definition:
-- You have `n` items, each with a specific weight and value.
-- You have a knapsack that can carry a maximum weight, `W`.
-- The goal is to find the subset of items that maximizes the total value without exceeding the weight limit.
+### Définition du Problème :
+- Vous disposez de `n` objets, chacun avec un poids et une valeur spécifiques.
+- Un sac à dos peut supporter un poids maximal `W`.
+- L’objectif est de trouver le sous-ensemble d’objets qui maximise la valeur totale sans dépasser la limite de poids.
 
-Formally:
+Formellement :
 
-$$ \text{Maximize} \quad \sum_{i=1}^{n} v_i x_i $$
-$$ \text{Subject to} \quad \sum_{i=1}^{n} w_i x_i \leq W $$
-Where:
-- \(v_i\) = value of item i
-- \(w_i\) = weight of item i
-- \(x_i\) = binary decision variable (1 if item i is selected, 0 otherwise)
-- \(W\) = maximum weight capacity of the knapsack
+$$ \text{Maximiser} \quad \sum_{i=1}^{n} v_i x_i $$  
+$$ \text{Sous contrainte} \quad \sum_{i=1}^{n} w_i x_i \leq W $$  
+
+Où :
+- \(v_i\) = valeur de l'objet \(i\)
+- \(w_i\) = poids de l'objet \(i\)
+- \(x_i\) = variable binaire (1 si l'objet \(i\) est sélectionné, 0 sinon)
+- \(W\) = capacité maximale du sac à dos
 
 ---
 
-## Optimization Techniques Used 🧠
+## Techniques d'Optimisation Utilisées 🧠
 
-This project applies three distinct methods to solve the Knapsack Problem:
+Ce projet applique trois méthodes (dont 2 métaheuristiques) distinctes pour résoudre le problème du sac à dos :
 
-### 1. **Genetic Algorithm (GA)** 🧬
+### 1. **Algorithme Génétique (GA)** 🧬
 
-Genetic algorithms are inspired by natural selection and use a population-based approach. In this implementation:
-- Solutions are encoded as binary strings.
-- Parents are selected based on their fitness (total value), and offspring are created through crossover and mutation.
-- The best individuals are chosen for the next generation.
+Les algorithmes génétiques sont inspirés de la sélection naturelle et utilisent une approche basée sur une population. Dans cette implémentation :
+- Les solutions sont encodées sous forme de chaînes binaires.
+- Les parents sont sélectionnés en fonction de leur valeur de fitness (valeur totale), et les descendants sont créés par croisement et mutation.
+- Les meilleurs individus sont sélectionnés pour la génération suivante.
 
-### 2. **Tabu Search** 🔄
+### 2. **Recherche Tabou** 🔄
 
-Tabu Search is a local search algorithm that enhances the performance of simple neighborhood search methods by using memory structures (tabu lists) to avoid revisiting previous solutions. The algorithm:
-- Starts with an initial solution and explores the neighborhood iteratively.
-- Avoids cycling by keeping track of recent moves using a Tabu list.
+La recherche tabou est un algorithme de recherche locale qui améliore la performance des méthodes de recherche basiques en utilisant des structures de mémoire (listes taboues) pour éviter de revisiter les solutions précédentes. L’algorithme :
+- Démarre avec une solution initiale et explore le voisinage de manière itérative.
+- Évite les cycles en gardant en mémoire les derniers déplacements effectués.
 
-### 3. **Linear Programming with Solver** 📊
+### 3. **Programmation Linéaire avec un Solveur** 📊
 
-Linear programming (LP) is used to solve the problem as a series of linear equations and inequalities. This method is implemented with a solver to find the optimal solution by:
-- Defining decision variables, objective function, and constraints.
-- Using the **Simplex Method** or another LP solver to find the optimal solution efficiently.
+La programmation linéaire (PL) permet de résoudre le problème sous forme d’un ensemble d’équations et d’inégalités linéaires. Cette méthode utilise un solveur pour obtenir une solution optimale en :
+- Définissant les variables de décision, la fonction objectif et les contraintes.
+- Utilisant la **méthode du Simplex** ou un autre solveur PL pour trouver l’optimum efficacement.
 
 ---
 
 ## Installation 🔧
 
-To run this project locally, follow the steps below:
+Pour exécuter ce projet en local, suivez les étapes ci-dessous :
 
-1. **Clone the repository**:
+1. **Cloner le dépôt** :
    ```bash
-   git clone https://github.com/your-username/knapsack-optimization.git
-   cd knapsack-optimization
+   git clone https://github.com/KHARFIAdam/Knapsack_Opt
+   cd Knapsack_Opt
