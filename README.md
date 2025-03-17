@@ -17,7 +17,7 @@ $$ \text{Maximiser} \quad \sum_{i=1}^{n} v_i x_i $$
 $$ \text{Sous contrainte} \quad \sum_{i=1}^{n} w_i x_i \leq W $$  
 
 Où :
-- \(v_i\) = valeur de l'objet \(i\)
+- $$ \(v_i\) $$ = valeur de l'objet \(i\)
 - \(w_i\) = poids de l'objet \(i\)
 - \(x_i\) = variable binaire (1 si l'objet \(i\) est sélectionné, 0 sinon)
 - \(W\) = capacité maximale du sac à dos
