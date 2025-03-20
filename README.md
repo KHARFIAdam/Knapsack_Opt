@@ -7,7 +7,7 @@ Ce dépôt contient une solution au classique **Problème du Sac à Dos** en uti
 Le **Problème du Sac à Dos** consiste à sélectionner un sous-ensemble d'objets ayant des poids et des valeurs donnés afin de maximiser la valeur totale sans dépasser une limite de poids. Ce problème d'optimisation combinatoire est couramment utilisé dans des domaines tels que l’allocation des ressources, la logistique, et bien plus encore.
 
 ### Définition du Problème :
-- Vous disposez de `n` objets, chacun avec un poids et une valeur spécifiques.
+- On dispose de `n` objets, chacun avec un poids et une valeur spécifiques.
 - Un sac à dos peut supporter un poids maximal `W`.
 - L’objectif est de trouver le sous-ensemble d’objets qui maximise la valeur totale sans dépasser la limite de poids.
 
@@ -17,7 +17,7 @@ $$ \text{Maximiser} \quad \sum_{i=1}^{n} v_i x_i $$
 $$ \text{Sous contrainte} \quad \sum_{i=1}^{n} w_i x_i \leq W $$  
 
 Où :
-- $$ \(v_i\) $$ = valeur de l'objet \(i\)
+- \(v_i\) = valeur de l'objet \(i\)
 - \(w_i\) = poids de l'objet \(i\)
 - \(x_i\) = variable binaire (1 si l'objet \(i\) est sélectionné, 0 sinon)
 - \(W\) = capacité maximale du sac à dos
